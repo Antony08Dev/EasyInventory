@@ -19,7 +19,7 @@ const Layout = () => {
             </main>
             <footer className="bg-gray-200 p-4">
                 <div className="container mx-auto text-center">
-                    <p>&copy; Un tal antony le dijo a gpt hazme un diseño basico.</p>
+                    <p>&copy; Hola Buenas tardes.</p>
                 </div>
             </footer>
         </div>
