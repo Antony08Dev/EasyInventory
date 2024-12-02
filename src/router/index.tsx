@@ -7,13 +7,13 @@ const Products = lazy(() => import('../views/products/Products'))
 const Layout = lazy(() => import('../component/layout/Layout'))
 
 // Protected Route wrapper
-const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
-    const isAuthenticated = localStorage.getItem('token')
-    if (!isAuthenticated) {
-        return <Navigate to="/login" replace />
-    }
-    return children
-}
+// const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
+//     const isAuthenticated = localStorage.getItem('token')
+//     if (!isAuthenticated) {
+//         return <Navigate to="/login" replace />
+//     }
+//     return children
+// }
 
 const router = createBrowserRouter([
     {
@@ -27,11 +27,11 @@ const router = createBrowserRouter([
     {
         path: '/',
         element: (
-            <ProtectedRoute>
+            // <ProtectedRoute>
                 <Suspense fallback={<div>Loading...</div>}>
                     <Layout />
                 </Suspense>
-            </ProtectedRoute>
+            // </ProtectedRoute>
         ),
         children: [
             {
