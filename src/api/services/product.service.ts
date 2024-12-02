@@ -3,18 +3,18 @@ import type { Product } from '../../interfaces/product.interface'
 
 export const ProductsService = {
     getAll: () =>
-        axiosInstance.get<Product[]>('/products'),
+        axiosInstance.get<Product[]>('/Producto'),
 
     getById: (id: number) =>
-        axiosInstance.get<Product>(`/products/${id}`),
+        axiosInstance.get<Product>(`/Producto/${id}`),
 
     create: (product: Omit<Product, 'id'>) =>
-        axiosInstance.post<Product>('/products', product),
+        axiosInstance.post<Product>('/Producto', product),
 
     update: (id: number, product: Partial<Product>) =>
-        axiosInstance.put<Product>(`/products/${id}`, product),
+        axiosInstance.put<Product>(`/Producto/${id}`, product),
 
     delete: (id: number) =>
-        axiosInstance.delete(`/products/${id}`),
+        axiosInstance.delete(`/Producto/${id}`),
 }
 
