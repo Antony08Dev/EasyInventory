@@ -9,7 +9,7 @@ export const ProductsService = {
         axiosInstance.get<Product>(`/Producto/${id}`),
 
     create: (product: Omit<Product, 'id'>) =>
-        axiosInstance.post<Product>('/Producto', product),
+        axiosInstance.post<Product>('/Producto', [product]  ),
 
     update: (id: number, product: Partial<Product>) =>
         axiosInstance.put<Product>(`/Producto/${id}`, product),

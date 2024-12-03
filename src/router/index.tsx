@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom'
-import React, { Suspense, lazy } from 'react'
+import { Suspense, lazy } from 'react'
 
 // Lazy load pages
 const Login = lazy(() => import('../views/auth/Login'))
